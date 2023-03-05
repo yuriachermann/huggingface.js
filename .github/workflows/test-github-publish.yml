@@ -28,7 +28,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
       - run: pnpm install
       - run: echo ~/.npmrc
-      - name: Update ~/.npmrc
+        # - name: Update ~/.npmrc
         # run: |
         #   echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
       - run: pnpm publish . --publish-branch test-github-publish
