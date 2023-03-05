@@ -25,13 +25,13 @@ jobs:
             packages/inference/pnpm-lock.yaml
             packages/doc-internal/pnpm-lock.yaml
           # setting a registry enables the NODE_AUTH_TOKEN env variable where we can set an npm token.  REQUIRED
-          registry-url: "https://registry.npmjs.org"
+          registry-url: "https://npm.pkg.github.com"
       - run: pnpm install
+      - run: echo ~/.npmrc
       - name: Update ~/.npmrc
-        run: |
-          echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
-      - run: pnpm publish . --registry "https://npm.pkg.github.com" --publish-branch test-github-publish
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # run: |
+        #   echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+      - run: pnpm publish . --publish-branch test-github-publish
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
