@@ -27,11 +27,10 @@ jobs:
           # setting a registry enables the NODE_AUTH_TOKEN env variable where we can set an npm token.  REQUIRED
           registry-url: "https://npm.pkg.github.com"
       - run: pnpm install
-      - run: cat ~/.npmrc
         # - name: Update ~/.npmrc
         # run: |
         #   echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
       - run: pnpm publish . --publish-branch test-github-publish
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
