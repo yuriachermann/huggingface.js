@@ -29,6 +29,6 @@ jobs:
       - run: pnpm install
       - name: Update ~/.npmrc
         run: |
-          echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+          echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
       - run: pnpm publish . --registry "https://npm.pkg.github.com" --publish-branch test-github-publish
 
