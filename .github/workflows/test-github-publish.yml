@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: "18"
           registry-url: "https://npm.pkg.github.com"
-      - run: pnpm publish .
+      - run: pnpm publish . --publish-branch test-github-publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
