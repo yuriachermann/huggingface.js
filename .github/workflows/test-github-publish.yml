@@ -1,0 +1,32 @@
+name: Inference - Test github publish
+
+on:
+  push
+
+defaults:
+  run:
+    working-directory: packages/inference
+
+jobs:
+  version_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.1.5
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "pnpm"
+          cache-dependency-path: |
+            packages/inference/pnpm-lock.yaml
+            packages/doc-internal/pnpm-lock.yaml
+          # setting a registry enables the NODE_AUTH_TOKEN env variable where we can set an npm token.  REQUIRED
+          registry-url: "https://registry.npmjs.org"
+      - run: pnpm install
+      - run: pnpm publish . --registry "https://npm.pkg.github.com"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
