@@ -4,24 +4,24 @@
 		HighlightCoordinates,
 		InferenceRunOpts,
 		ExampleRunOpts,
-	} from "$lib/components/InferenceWidget/shared/types.js";
+	} from "../../../InferenceWidget/shared/types.js";
 	import type {
 		WidgetExampleStructuredDataInput,
 		WidgetExampleOutputLabels,
-	} from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	} from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetTableInput from "../../shared/WidgetTableInput/WidgetTableInput.svelte";
 	import WidgetSubmitBtn from "../../shared/WidgetSubmitBtn/WidgetSubmitBtn.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import { mod } from "$lib/utils/ViewUtils.js";
+	import { mod } from "../../../../utils/ViewUtils.js";
 	import {
 		addInferenceParameters,
 		convertDataToTable,
 		convertTableToData,
 		callInferenceApi,
 		updateUrl,
-	} from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isStructuredDataInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	} from "../../../InferenceWidget/shared/helpers.js";
+	import { isStructuredDataInput } from "../../../InferenceWidget/shared/inputValidation.js";
 
 	export let apiToken: WidgetProps["apiToken"];
 	export let apiUrl: WidgetProps["apiUrl"];

@@ -1,20 +1,16 @@
 <script lang="ts">
-	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "$lib/components/InferenceWidget/shared/types.js";
+	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "../../../InferenceWidget/shared/types.js";
 	import type {
 		WidgetExampleTextInput,
 		WidgetExampleOutputUrl,
 		WidgetExample,
-	} from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	} from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetQuickInput from "../../shared/WidgetQuickInput/WidgetQuickInput.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import {
-		addInferenceParameters,
-		callInferenceApi,
-		updateUrl,
-	} from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isValidOutputUrl } from "$lib/components/InferenceWidget/shared/outputValidation.js";
-	import { isTextInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	import { addInferenceParameters, callInferenceApi, updateUrl } from "../../../InferenceWidget/shared/helpers.js";
+	import { isValidOutputUrl } from "../../../InferenceWidget/shared/outputValidation.js";
+	import { isTextInput } from "../../../InferenceWidget/shared/inputValidation.js";
 
 	export let apiToken: WidgetProps["apiToken"];
 	export let apiUrl: WidgetProps["apiUrl"];

@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "$lib/components/InferenceWidget/shared/types.js";
-	import type { WidgetExampleAssetAndPromptInput } from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "../../../InferenceWidget/shared/types.js";
+	import type { WidgetExampleAssetAndPromptInput } from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetFileInput from "../../shared/WidgetFileInput/WidgetFileInput.svelte";
 	import WidgetDropzone from "../../shared/WidgetDropzone/WidgetDropzone.svelte";
 	import WidgetTextInput from "../../shared/WidgetTextInput/WidgetTextInput.svelte";
 	import WidgetSubmitBtn from "../../shared/WidgetSubmitBtn/WidgetSubmitBtn.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import { addInferenceParameters, callInferenceApi } from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isAssetAndPromptInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	import { addInferenceParameters, callInferenceApi } from "../../../InferenceWidget/shared/helpers.js";
+	import { isAssetAndPromptInput } from "../../../InferenceWidget/shared/inputValidation.js";
 
 	export let apiToken: WidgetProps["apiToken"];
 	export let apiUrl: WidgetProps["apiUrl"];

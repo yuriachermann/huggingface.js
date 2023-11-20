@@ -1,18 +1,14 @@
 <script lang="ts">
-	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "$lib/components/InferenceWidget/shared/types.js";
-	import type { WidgetExampleTextInput } from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "../../../InferenceWidget/shared/types.js";
+	import type { WidgetExampleTextInput } from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetOuputTokens from "../../shared/WidgetOutputTokens/WidgetOutputTokens.svelte";
 	import WidgetTextarea from "../../shared/WidgetTextarea/WidgetTextarea.svelte";
 	import WidgetSubmitBtn from "../../shared/WidgetSubmitBtn/WidgetSubmitBtn.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import {
-		addInferenceParameters,
-		callInferenceApi,
-		updateUrl,
-	} from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isTextInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
-	import { uniqBy } from "$lib/utils/ViewUtils.js";
+	import { addInferenceParameters, callInferenceApi, updateUrl } from "../../../InferenceWidget/shared/helpers.js";
+	import { isTextInput } from "../../../InferenceWidget/shared/inputValidation.js";
+	import { uniqBy } from "../../../../utils/ViewUtils.js";
 
 	interface EntityGroup {
 		entity_group: string;

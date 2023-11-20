@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "$lib/components/InferenceWidget/shared/types.js";
-	import type { WidgetExampleAssetAndZeroShotInput } from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "../../../InferenceWidget/shared/types.js";
+	import type { WidgetExampleAssetAndZeroShotInput } from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import { onMount } from "svelte";
 
@@ -14,8 +14,8 @@
 		addInferenceParameters,
 		callInferenceApi,
 		getWidgetExample,
-	} from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isAssetAndZeroShotInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	} from "../../../InferenceWidget/shared/helpers.js";
+	import { isAssetAndZeroShotInput } from "../../../InferenceWidget/shared/inputValidation.js";
 
 	export let apiToken: WidgetProps["apiToken"];
 	export let apiUrl: WidgetProps["apiUrl"];
@@ -23,7 +23,6 @@
 	export let model: WidgetProps["model"];
 	export let noTitle: WidgetProps["noTitle"];
 	export let includeCredentials: WidgetProps["includeCredentials"];
-	let isDisabled = false;
 
 	let candidateLabels = "";
 	let computeTime = "";

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ImageSegment } from "$lib/components/InferenceWidget/shared/types.js";
+	import type { ImageSegment } from "../../../InferenceWidget/shared/types.js";
 
 	import { afterUpdate } from "svelte";
 

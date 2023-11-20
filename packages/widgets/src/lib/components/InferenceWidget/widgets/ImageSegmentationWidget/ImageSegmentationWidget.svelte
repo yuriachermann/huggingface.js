@@ -4,19 +4,19 @@
 		ImageSegment,
 		ExampleRunOpts,
 		InferenceRunOpts,
-	} from "$lib/components/InferenceWidget/shared/types.js";
-	import type { WidgetExampleAssetInput } from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	} from "../../../InferenceWidget/shared/types.js";
+	import type { WidgetExampleAssetInput } from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import { onMount } from "svelte";
 
-	import { COLORS } from "$lib/components/InferenceWidget/shared/consts.js";
-	import { clamp, mod, hexToRgb } from "$lib/utils/ViewUtils.js";
-	import { callInferenceApi, getBlobFromUrl } from "$lib/components/InferenceWidget/shared/helpers.js";
+	import { COLORS } from "../../../InferenceWidget/shared/consts.js";
+	import { clamp, mod, hexToRgb } from "../../../../utils/ViewUtils.js";
+	import { callInferenceApi, getBlobFromUrl } from "../../../InferenceWidget/shared/helpers.js";
 	import WidgetFileInput from "../../shared/WidgetFileInput/WidgetFileInput.svelte";
 	import WidgetDropzone from "../../shared/WidgetDropzone/WidgetDropzone.svelte";
 	import WidgetOutputChart from "../../shared/WidgetOutputChart/WidgetOutputChart.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import { isAssetInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	import { isAssetInput } from "../../../InferenceWidget/shared/inputValidation.js";
 
 	import Canvas from "./Canvas.svelte";
 

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "$lib/components/InferenceWidget/shared/types.js";
+	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "../../../InferenceWidget/shared/types.js";
 	import type {
 		WidgetExampleTextInput,
 		WidgetExampleOutputText,
 		WidgetExample,
-	} from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	} from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetSubmitBtn from "../../shared/WidgetSubmitBtn/WidgetSubmitBtn.svelte";
 	import WidgetShortcutRunLabel from "../../shared/WidgetShortcutRunLabel/WidgetShortcutRunLabel.svelte";
@@ -13,13 +13,9 @@
 	import WidgetTimer from "../../shared/WidgetTimer/WidgetTimer.svelte";
 	import WidgetOutputText from "../../shared/WidgetOutputText/WidgetOutputText.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import {
-		addInferenceParameters,
-		callInferenceApi,
-		updateUrl,
-	} from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isValidOutputText } from "$lib/components/InferenceWidget/shared/outputValidation.js";
-	import { isTextInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	import { addInferenceParameters, callInferenceApi, updateUrl } from "../../../InferenceWidget/shared/helpers.js";
+	import { isValidOutputText } from "../../../InferenceWidget/shared/outputValidation.js";
+	import { isTextInput } from "../../../InferenceWidget/shared/inputValidation.js";
 	import type { PipelineType } from "@huggingface/tasks";
 
 	export let apiToken: WidgetProps["apiToken"];

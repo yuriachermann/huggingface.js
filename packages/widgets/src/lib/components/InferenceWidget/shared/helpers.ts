@@ -1,4 +1,4 @@
-import type { ModelData } from "$lib/interfaces/Types.js";
+import type { ModelData } from "../../../interfaces/Types.js";
 import { randomItem, parseJSON } from "../../../utils/ViewUtils.js";
 import type { WidgetExample, WidgetExampleAttribute } from "./WidgetExample.js";
 import type { ModelLoadInfo, TableData } from "./types.js";

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "$lib/components/InferenceWidget/shared/types.js";
-	import type { WidgetExampleZeroShotTextInput } from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "../../../InferenceWidget/shared/types.js";
+	import type { WidgetExampleZeroShotTextInput } from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetCheckbox from "../../shared/WidgetCheckbox/WidgetCheckbox.svelte";
 	import WidgetOutputChart from "../../shared/WidgetOutputChart/WidgetOutputChart.svelte";
@@ -8,12 +8,8 @@
 	import WidgetTextarea from "../../shared/WidgetTextarea/WidgetTextarea.svelte";
 	import WidgetTextInput from "../../shared/WidgetTextInput/WidgetTextInput.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import {
-		addInferenceParameters,
-		callInferenceApi,
-		updateUrl,
-	} from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isZeroShotTextInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	import { addInferenceParameters, callInferenceApi, updateUrl } from "../../../InferenceWidget/shared/helpers.js";
+	import { isZeroShotTextInput } from "../../../InferenceWidget/shared/inputValidation.js";
 
 	export let apiToken: WidgetProps["apiToken"];
 	export let apiUrl: WidgetProps["apiUrl"];
@@ -22,7 +18,6 @@
 	export let noTitle: WidgetProps["noTitle"];
 	export let shouldUpdateUrl: WidgetProps["shouldUpdateUrl"];
 	export let includeCredentials: WidgetProps["includeCredentials"];
-	let isDisabled = false;
 
 	let candidateLabels = "";
 	let computeTime = "";

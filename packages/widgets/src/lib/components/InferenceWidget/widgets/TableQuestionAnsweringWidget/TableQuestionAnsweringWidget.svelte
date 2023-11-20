@@ -4,8 +4,8 @@
 		HighlightCoordinates,
 		ExampleRunOpts,
 		InferenceRunOpts,
-	} from "$lib/components/InferenceWidget/shared/types.js";
-	import type { WidgetExampleTextAndTableInput } from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	} from "../../../InferenceWidget/shared/types.js";
+	import type { WidgetExampleTextAndTableInput } from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetQuickInput from "../../shared/WidgetQuickInput/WidgetQuickInput.svelte";
 	import WidgetOutputTableQA from "../../shared/WidgetOutputTableQA/WidgetOutputTableQA.svelte";
@@ -17,8 +17,8 @@
 		convertTableToData,
 		callInferenceApi,
 		updateUrl,
-	} from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isTextAndTableInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	} from "../../../InferenceWidget/shared/helpers.js";
+	import { isTextAndTableInput } from "../../../InferenceWidget/shared/inputValidation.js";
 	interface Output {
 		aggregator?: string;
 		answer: string;

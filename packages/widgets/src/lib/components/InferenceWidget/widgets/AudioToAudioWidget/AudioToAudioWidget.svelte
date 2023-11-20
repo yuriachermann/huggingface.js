@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "$lib/components/InferenceWidget/shared/types.js";
-	import type { WidgetExampleAssetInput } from "$lib/components/InferenceWidget/shared/WidgetExample.js";
+	import type { WidgetProps, ExampleRunOpts, InferenceRunOpts } from "../../../InferenceWidget/shared/types.js";
+	import type { WidgetExampleAssetInput } from "../../../InferenceWidget/shared/WidgetExample.js";
 
 	import WidgetAudioTrack from "../../shared/WidgetAudioTrack/WidgetAudioTrack.svelte";
 	import WidgetFileInput from "../../shared/WidgetFileInput/WidgetFileInput.svelte";
 	import WidgetRecorder from "../../shared/WidgetRecorder/WidgetRecorder.svelte";
 	import WidgetSubmitBtn from "../../shared/WidgetSubmitBtn/WidgetSubmitBtn.svelte";
 	import WidgetWrapper from "../../shared/WidgetWrapper/WidgetWrapper.svelte";
-	import { callInferenceApi, getBlobFromUrl } from "$lib/components/InferenceWidget/shared/helpers.js";
-	import { isAssetInput } from "$lib/components/InferenceWidget/shared/inputValidation.js";
+	import { callInferenceApi, getBlobFromUrl } from "../../../InferenceWidget/shared/helpers.js";
+	import { isAssetInput } from "../../../InferenceWidget/shared/inputValidation.js";
 
 	export let apiToken: WidgetProps["apiToken"];
 	export let apiUrl: WidgetProps["apiUrl"];
@@ -16,7 +16,6 @@
 	export let model: WidgetProps["model"];
 	export let noTitle: WidgetProps["noTitle"];
 	export let includeCredentials: WidgetProps["includeCredentials"];
-	let isDisabled = false;
 
 	let computeTime = "";
 	let error: string = "";
